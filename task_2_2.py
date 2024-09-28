@@ -1,5 +1,0 @@
-x = int(input("x:"))
-print("The digit in the thousands position is ", x // 1000)
-print("The number in the hundreds position is ", (x % 1000) // 100)
-print("The digit in the tens position is ", (x % 100) // 10)
-print("The digit in the position of units is ", (x % 2))
