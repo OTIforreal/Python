@@ -1,5 +1,0 @@
-x = int(input())
-y = int(input())
-z = int(input())
-if y - x == 1 and z - y == 1 : print("yes")
-else: print("no")

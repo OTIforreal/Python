@@ -1,6 +1,0 @@
-x = int(input())
-y = int(input())
-z = int(input())
-d = int(input())
-if () < 8 and (y + d) < 8 : print("yes")
-else: print("no")
