@@ -101,5 +101,59 @@ first_two = dict(list(sortedvals.items())[:3])
 
 print(first_two)
 """
+"""Task 6
+Write a code that converts an integer into a string, despite the fact that it can be used in any number system.
+"""
+
+"""
+def inttostring(number, base):
+
+    if base < 2 or base > 36:
+        raise ValueError("between 2 and 36.")
+
+    if number == 0:
+        return "0"
+
+    digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = []
+    isnegative = number < 0
+    number = abs(number)
+
+    while number > 0:
+        number, remainder = divmod(number, base)
+        result.append(digits[remainder])
+
+    if isnegative:
+        result.append("-")
+
+    return "".join(reversed(result))
+
+print(inttostring(255, 16))
+"""
+"""
+Task 7
+You need to print the first n lines of Pascals triangle. In this triangle, there are units at the top and on the sides, and each number inside is equal to the sum of the two numbers above it.
+"""
+"""
+def pascals_triangle(n):
+
+    triangle = []
+
+    for i in range(n):
+
+        row = [1] * (i + 1)
+        for j in range(1, i):
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+
+        triangle.append(row)
+
+        print(' '.join(map(str, row)))
+
+n = int(input())
+pascals_triangle(n)
+
+
+"""
+
 
 
